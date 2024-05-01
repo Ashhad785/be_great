@@ -108,7 +108,7 @@ class GReaT:
                 task_type=TaskType.CAUSAL_LM,  # this is specific for gpt2 model, to be adapted
             )
             # prepare int-8 model for training
-            self.model = prepare_model_for_int8_training(self.model)
+            self.model = prepare_model_for_kbit_training(self.model)
             # add LoRA adaptor
             self.model = get_peft_model(self.model, lora_config)
             self.model.print_trainable_parameters()
