@@ -3,7 +3,7 @@ import warnings
 import json
 import typing as tp
 import logging
-
+import peft
 import numpy as np
 import pandas as pd
 
